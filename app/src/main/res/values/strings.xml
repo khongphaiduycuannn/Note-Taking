@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Note Taking</string>
     <string name="loading">Loading…</string>
+    <string name="home">Home</string>
+    <string name="all_notes">All notes</string>
+    <string name="create_a_note">Create A Note</string>
+    <string name="import_notes">Import Notes</string>
+    <string name="create_first_note">Create Your First Note</string>
+    <string name="first_note_content">Add a not about anything (your thoughts on climate change, or history essay) and share it with the world.</string>
 </resources>
