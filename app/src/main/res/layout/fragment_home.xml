@@ -45,72 +45,20 @@
             android:src="@drawable/ic_search" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ln_create_first_note"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <include
+            android:id="@+id/layout_create_first_note"
+            layout="@layout/layout_create_first_note"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginHorizontal="17dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="45dp"
-                android:src="@drawable/img_create_first_note" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/nunito_bold"
-                android:text="@string/create_first_note"
-                android:textAlignment="center"
-                android:textColor="#403B36"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="13dp"
-                android:fontFamily="@font/nunito_medium"
-                android:text="@string/first_note_content"
-                android:textAlignment="center"
-                android:textColor="#403B36"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
+        <include
+            android:id="@+id/layout_notes_list"
+            layout="@layout/layout_notes_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="17dp"
-            android:layout_marginBottom="18dp"
-            android:background="@drawable/bg_button_rectangle_orange"
-            android:fontFamily="@font/nunito_bold"
-            android:padding="15dp"
-            android:text="@string/create_a_note"
-            android:textAllCaps="false"
-            android:textColor="#FFFBFA"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tv_import_notes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="17dp"
-            android:layout_marginBottom="35dp"
-            android:fontFamily="@font/nunito_bold"
-            android:text="@string/import_notes"
-            android:textAlignment="center"
-            android:textColor="#D9614C"
-            android:textSize="18sp" />
-    </LinearLayout>
+            android:layout_height="match_parent" />
+    </FrameLayout>
 </LinearLayout>
