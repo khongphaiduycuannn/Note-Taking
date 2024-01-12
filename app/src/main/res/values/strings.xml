@@ -8,4 +8,7 @@
     <string name="create_first_note">Create Your First Note</string>
     <string name="first_note_content">Add a not about anything (your thoughts on climate change, or history essay) and share it with the world.</string>
     <string name="add_note">Add Note</string>
+    <string name="your_note_title">Your note title</string>
+    <string name="your_note_content">Your note content</string>
+    <string name="edit_note">Edit Note</string>
 </resources>
