@@ -11,4 +11,10 @@
     <string name="your_note_title">Your note title</string>
     <string name="your_note_content">Your note content</string>
     <string name="edit_note">Edit Note</string>
+    <string name="notely">NOTELY</string>
+    <string name="user_name_default">Duy Minh Quan</string>
+    <string name="address_default">Hoai Duc, Ha Noi</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="notifications">Notifications</string>
+    <string name="logout">Logout</string>
 </resources>
