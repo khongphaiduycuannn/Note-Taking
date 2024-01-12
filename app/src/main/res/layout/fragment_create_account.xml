@@ -84,6 +84,7 @@
                 android:background="@drawable/bg_edt_rectangle_white"
                 android:fontFamily="@font/nunito_medium"
                 android:hint="@string/your_full_name"
+                android:inputType="text"
                 android:padding="18dp"
                 android:textColor="#595550"
                 android:textCursorDrawable="@drawable/edt_small_cursor"
@@ -121,6 +122,7 @@
                 android:background="@drawable/bg_edt_rectangle_white"
                 android:fontFamily="@font/nunito_medium"
                 android:hint="@string/your_email_address"
+                android:inputType="textEmailAddress"
                 android:padding="18dp"
                 android:textColor="#595550"
                 android:textCursorDrawable="@drawable/edt_small_cursor"
@@ -171,7 +173,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.2"
+        android:layout_weight="2.5"
         android:gravity="center"
         android:orientation="vertical">
 

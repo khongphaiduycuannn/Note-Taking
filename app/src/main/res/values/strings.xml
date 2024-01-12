@@ -24,11 +24,15 @@
     <string name="create_a_free_account">Create a free account</string>
     <string name="create_account_content">Join Notely for free. Create and share unlimited notes with your friend.</string>
     <string name="full_name">Full Name</string>
-    <string name="your_full_name">Your full name…</string>
+    <string name="your_full_name">Your full name</string>
     <string name="email_address">Email Address</string>
-    <string name="your_email_address">Your email address…</string>
+    <string name="your_email_address">Your email address</string>
     <string name="password">Password</string>
-    <string name="your_password">Your password…</string>
+    <string name="your_password">Your password</string>
     <string name="create_account">Create Account</string>
     <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="login_content">Add a note about anything and share it with the world.</string>
 </resources>
