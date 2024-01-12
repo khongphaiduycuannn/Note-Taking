@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentCreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appBackgroundDefault"
+    android:orientation="vertical"
+    tools:context=".ui.login.CreateAccountFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/titanone"
+        android:text="@string/notely"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/create_a_free_account"
+            android:textAlignment="center"
+            android:textColor="#403B36"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:fontFamily="@font/nunito_medium"
+            android:text="@string/create_account_content"
+            android:textAlignment="center"
+            android:textColor="#403B36"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ln_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/ln_email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nunito_medium"
+                android:text="@string/full_name"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edt_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/bg_edt_rectangle_white"
+                android:fontFamily="@font/nunito_medium"
+                android:hint="@string/your_full_name"
+                android:padding="18dp"
+                android:textColor="#595550"
+                android:textCursorDrawable="@drawable/edt_large_cursor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Duy Minh Quan" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/ln_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ln_full_name">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nunito_medium"
+                android:text="@string/email_address"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:inputType="textEmailAddress"
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/bg_edt_rectangle_white"
+                android:fontFamily="@font/nunito_medium"
+                android:hint="@string/your_email_address"
+                android:padding="18dp"
+                android:textColor="#595550"
+                android:textCursorDrawable="@drawable/edt_large_cursor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="ndmquan1010@gmail.com" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ln_email">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nunito_medium"
+                android:text="@string/password"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/bg_edt_rectangle_white"
+                android:fontFamily="@font/nunito_medium"
+                android:hint="@string/your_password"
+                android:inputType="textPassword"
+                android:padding="18dp"
+                android:textColor="#595550"
+                android:textCursorDrawable="@drawable/edt_large_cursor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="quanduy1010" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/bg_button_rectangle_orange"
+            android:fontFamily="@font/nunito_bold"
+            android:padding="15dp"
+            android:text="@string/create_account"
+            android:textAllCaps="false"
+            android:textColor="#FFFBFA"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/already_have_an_account"
+            android:textAlignment="center"
+            android:textColor="#D9614C"
+            android:textSize="18sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</LinearLayout>

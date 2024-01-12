@@ -66,7 +66,7 @@
                 android:hint="@string/your_note_title"
                 android:inputType="textMultiLine"
                 android:textColor="#403B36"
-                android:textCursorDrawable="@drawable/edt_cursor"
+                android:textCursorDrawable="@drawable/edt_large_cursor"
                 android:textSize="27sp"
                 tools:text="Cerebral" />
 
@@ -81,7 +81,7 @@
                 android:inputType="textMultiLine"
                 android:paddingBottom="20dp"
                 android:textColor="#403B36"
-                android:textCursorDrawable="@drawable/edt_cursor"
+                android:textCursorDrawable="@drawable/edt_small_cursor"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="Cerebral palsy sport classification is a classification system used by sports that include people with cerebral palsy (CP) with different degrees of severity to compete fairly against each other and against others with different types of disabilities. In general, Cerebral Palsy-International Sports and Recreation Association (CP-ISRA) serves as the body in charge of classification for cerebral palsy sport, though some sports have their own classification systems which apply to CP sportspeople." />
