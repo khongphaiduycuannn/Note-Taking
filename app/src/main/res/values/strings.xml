@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Note Taking</string>
+    <string name="app_name">Notely</string>
     <string name="loading">Loading…</string>
 
     <string name="home">Home</string>
