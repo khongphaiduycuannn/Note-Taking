@@ -1,6 +1,7 @@
 package com.example.notetaking.ui.login
 
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.notetaking.base.BaseFragment
 import com.example.notetaking.databinding.FragmentCreateAccountBinding
 
@@ -22,6 +23,8 @@ class CreateAccountFragment :
     }
 
     override fun setOnClick() {
-
+        binding.tvLogin.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }
