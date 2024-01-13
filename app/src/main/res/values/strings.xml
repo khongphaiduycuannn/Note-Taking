@@ -35,4 +35,7 @@
     <string name="create_an_account">Create an account</string>
     <string name="login_to_your_account">Login to your account</string>
     <string name="login_content">Add a note about anything and share it with the world.</string>
+    <string name="get_started">Get Started</string>
+    <string name="get_started_title">World’s Safest And Largest Digital Notebook</string>
+    <string name="get_started_content">Notely is the world’s safest, largest and intelligent digital notebook. Join over 10M+ users already using Notely.</string>
 </resources>
