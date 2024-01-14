@@ -1,6 +1,7 @@
 package com.example.notetaking.ui.note
 
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.notetaking.base.BaseFragment
 import com.example.notetaking.databinding.FragmentNoteBinding
 
@@ -22,6 +23,8 @@ class NoteFragment :
     }
 
     override fun setOnClick() {
-
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 }
