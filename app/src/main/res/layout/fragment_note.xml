@@ -12,15 +12,14 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="54dp"
-        android:layout_marginHorizontal="17dp"
         android:layout_marginBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/btn_back"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
             android:background="@android:color/transparent"
             android:scaleX="1.1"
             android:scaleY="1.1"
@@ -38,8 +37,8 @@
 
         <ImageButton
             android:id="@+id/btn_option"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
             android:background="@android:color/transparent"
             android:scaleX="1.1"
             android:scaleY="1.1"
@@ -60,14 +59,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="8dp"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/nunito_bold"
                 android:hint="@string/your_note_title"
                 android:inputType="text"
                 android:textColor="#403B36"
                 android:textCursorDrawable="@drawable/edt_large_cursor"
-                android:textSize="27sp"
+                android:textSize="25sp"
                 tools:text="Cerebral" />
 
             <EditText
@@ -82,7 +81,7 @@
                 android:paddingBottom="20dp"
                 android:textColor="#403B36"
                 android:textCursorDrawable="@drawable/edt_small_cursor"
-                android:textSize="18sp"
+                android:textSize="19sp"
                 android:textStyle="bold"
                 tools:text="Cerebral palsy sport classification is a classification system used by sports that include people with cerebral palsy (CP) with different degrees of severity to compete fairly against each other and against others with different types of disabilities. In general, Cerebral Palsy-International Sports and Recreation Association (CP-ISRA) serves as the body in charge of classification for cerebral palsy sport, though some sports have their own classification systems which apply to CP sportspeople." />
         </LinearLayout>
