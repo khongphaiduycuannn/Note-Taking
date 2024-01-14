@@ -2,6 +2,7 @@ package com.example.notetaking.ui.home
 
 import android.view.View
 import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -73,6 +74,10 @@ class HomeFragment :
             }
             true
         }
+
+        binding.nvDrawerView.setNavigationItemSelectedListener { item ->
+            onNavigationItemSelected(item.itemId)
+        }
     }
 
     private fun onNoteItemClick() {
@@ -96,5 +101,17 @@ class HomeFragment :
             binding.btnSearch.isEnabled = true
             binding.btnClose.isEnabled = true
         }
+    }
+
+    private fun onNavigationItemSelected(itemId: Int): Boolean {
+        when (itemId) {
+            R.id.nav_profile -> {
+                findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+            }
+            R.id.nav_team -> {
+                Toast.makeText(requireContext(), "This module has not done yet!", Toast.LENGTH_LONG).show()
+            }
+        }
+        return true
     }
 }
