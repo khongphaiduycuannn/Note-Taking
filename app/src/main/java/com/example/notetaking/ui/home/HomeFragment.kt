@@ -79,7 +79,7 @@ class HomeFragment :
         findNavController().navigate(R.id.action_homeFragment_to_noteFragment)
     }
 
-    private fun resizeSearchBarWidth(startWidth: Int, endWidth: Int, duration: Long = 400) {
+    private fun resizeSearchBarWidth(startWidth: Int, endWidth: Int, duration: Long = 300) {
         val animationEdtSearchNote =
             ResizeWidthAnimation(binding.edtSearchNote, startWidth, endWidth)
         animationEdtSearchNote.duration = duration
