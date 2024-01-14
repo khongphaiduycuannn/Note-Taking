@@ -1,4 +1,4 @@
-package com.example.projectbase.utils.extension
+package com.example.notetaking.utils.extension
 
 import android.app.Dialog
 import android.graphics.Color

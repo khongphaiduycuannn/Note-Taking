@@ -1,9 +1,9 @@
-package com.example.projectbase.utils.extension
+package com.example.notetaking.utils.extension
 
 import android.os.Handler
 import android.os.Looper
 
-fun Any.delayHandler(durationInMillis: Long, block: () -> Unit) {
+fun delayHandler(durationInMillis: Long, block: () -> Unit) {
     Handler(Looper.getMainLooper())
         .postDelayed({ block.invoke() }, durationInMillis)
 }

@@ -1,5 +1,8 @@
 package com.example.notetaking.ui.home
 
+import android.view.View
+import android.view.inputmethod.EditorInfo
+import androidx.core.view.GravityCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -7,6 +10,10 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notetaking.R
 import com.example.notetaking.base.BaseFragment
 import com.example.notetaking.databinding.FragmentHomeBinding
+import com.example.notetaking.utils.extension.delayHandler
+import com.example.notetaking.utils.extension.hideKeyboard
+import com.example.notetaking.view.animation.ResizeWidthAnimation
+import java.lang.Integer.max
 
 class HomeFragment :
     BaseFragment<FragmentHomeBinding, HomeViewModel>(FragmentHomeBinding::inflate) {
@@ -16,6 +23,8 @@ class HomeFragment :
             onNoteItemClick()
         }
     }
+
+    private var searchBarWidth = 0
 
     override val viewModel: HomeViewModel
         get() = ViewModelProvider(this)[HomeViewModel::class.java]
@@ -28,6 +37,10 @@ class HomeFragment :
         val rclNotesList = binding.layoutNotesList.rclNotesList
         rclNotesList.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
         rclNotesList.adapter = noteListAdapter
+
+        binding.tvAllNotes.viewTreeObserver.addOnGlobalLayoutListener {
+            searchBarWidth = max(binding.tvAllNotes.width, binding.edtSearchNote.width)
+        }
     }
 
     override fun observeData() {
@@ -37,10 +50,49 @@ class HomeFragment :
     }
 
     override fun setOnClick() {
+        binding.btnMenu.setOnClickListener {
+            binding.fragmentHome.openDrawer(GravityCompat.START)
+        }
 
+        binding.btnSearch.setOnClickListener {
+            resizeSearchBarWidth(0, searchBarWidth)
+            it.visibility = View.GONE
+            binding.btnClose.visibility = View.VISIBLE
+        }
+
+        binding.btnClose.setOnClickListener {
+            resizeSearchBarWidth(searchBarWidth, 0)
+            it.visibility = View.GONE
+            binding.btnSearch.visibility = View.VISIBLE
+        }
+
+        binding.edtSearchNote.setOnEditorActionListener { view, actionId, _ ->
+            if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                requireContext().hideKeyboard(view)
+            }
+            true
+        }
     }
 
     private fun onNoteItemClick() {
         findNavController().navigate(R.id.action_homeFragment_to_noteFragment)
+    }
+
+    private fun resizeSearchBarWidth(startWidth: Int, endWidth: Int, duration: Long = 400) {
+        val animationEdtSearchNote =
+            ResizeWidthAnimation(binding.edtSearchNote, startWidth, endWidth)
+        animationEdtSearchNote.duration = duration
+        binding.edtSearchNote.startAnimation(animationEdtSearchNote)
+
+        val animationTvAllNote = ResizeWidthAnimation(binding.tvAllNotes, endWidth, startWidth)
+        animationTvAllNote.duration = duration
+        binding.tvAllNotes.startAnimation(animationTvAllNote)
+
+        binding.btnSearch.isEnabled = false
+        binding.btnClose.isEnabled = false
+        delayHandler(duration) {
+            binding.btnSearch.isEnabled = true
+            binding.btnClose.isEnabled = true
+        }
     }
 }

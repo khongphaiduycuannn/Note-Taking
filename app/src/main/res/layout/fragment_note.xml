@@ -64,7 +64,7 @@
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/nunito_bold"
                 android:hint="@string/your_note_title"
-                android:inputType="textMultiLine"
+                android:inputType="text"
                 android:textColor="#403B36"
                 android:textCursorDrawable="@drawable/edt_large_cursor"
                 android:textSize="27sp"
