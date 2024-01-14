@@ -39,4 +39,7 @@
     <string name="get_started_title">World’s Safest And Largest Digital Notebook</string>
     <string name="get_started_content">Notely is the world’s safest, largest and intelligent digital notebook. Join over 10M+ users already using Notely.</string>
     <string name="search_note">Search note</string>
+    <string name="profile">Profile</string>
+    <string name="teams">Teams</string>
+    <string name="setting">Setting</string>
 </resources>

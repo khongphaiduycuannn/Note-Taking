@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackgroundDefault"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    tools:openDrawer="start">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,14 +57,14 @@
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/bg_edt_search_bar"
                     android:fontFamily="@font/nunito_bold"
+                    android:hint="@string/search_note"
                     android:imeOptions="actionSearch"
                     android:inputType="text"
                     android:paddingHorizontal="15dp"
                     android:paddingVertical="1dp"
                     android:textAlignment="textStart"
                     android:textCursorDrawable="@drawable/edt_large_cursor"
-                    android:textSize="17sp"
-                    android:hint="@string/search_note" />
+                    android:textSize="17sp" />
             </LinearLayout>
 
             <FrameLayout
@@ -113,5 +115,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:layout_marginEnd="30dp" />
+        android:layout_marginEnd="30dp"
+        android:background="#FFFDFA"
+        app:drawerLayoutCornerSize="25dp"
+        app:headerLayout="@layout/drawer_header_home"
+        app:itemIconTint="#595550"
+        app:itemTextAppearance="@style/home_menu_text_style"
+        app:itemTextColor="#595550"
+        app:menu="@menu/menu_home"
+        app:subheaderColor="#595550"
+        app:subheaderTextAppearance="@style/home_menu_text_style" />
 </androidx.drawerlayout.widget.DrawerLayout>
