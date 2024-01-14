@@ -64,6 +64,7 @@ class HomeFragment :
             resizeSearchBarWidth(searchBarWidth, 0)
             it.visibility = View.GONE
             binding.btnSearch.visibility = View.VISIBLE
+            binding.edtSearchNote.setText("")
         }
 
         binding.edtSearchNote.setOnEditorActionListener { view, actionId, _ ->
@@ -84,7 +85,8 @@ class HomeFragment :
         animationEdtSearchNote.duration = duration
         binding.edtSearchNote.startAnimation(animationEdtSearchNote)
 
-        val animationTvAllNote = ResizeWidthAnimation(binding.tvAllNotes, endWidth, startWidth)
+        val animationTvAllNote =
+            ResizeWidthAnimation(binding.tvAllNotes, endWidth, startWidth)
         animationTvAllNote.duration = duration
         binding.tvAllNotes.startAnimation(animationTvAllNote)
 
