@@ -3,6 +3,7 @@ package com.example.notetaking.ui.home
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -78,6 +79,13 @@ class HomeFragment :
         binding.nvDrawerView.setNavigationItemSelectedListener { item ->
             onNavigationItemSelected(item.itemId)
         }
+
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                requireActivity().finish()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, callback)
     }
 
     private fun onNoteItemClick() {

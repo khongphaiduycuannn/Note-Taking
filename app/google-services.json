@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "150154340731",
+    "project_id": "notely-519c1",
+    "storage_bucket": "notely-519c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150154340731:android:01b4ffe16b0af33158b5de",
+        "android_client_info": {
+          "package_name": "com.example.notetaking"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvNEIXzzUC3Wf4XHqLy3BOpZA69ov6TJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

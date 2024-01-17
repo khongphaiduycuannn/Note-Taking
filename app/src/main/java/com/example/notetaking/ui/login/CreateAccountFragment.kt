@@ -7,6 +7,7 @@ import com.example.notetaking.databinding.FragmentCreateAccountBinding
 
 class CreateAccountFragment :
     BaseFragment<FragmentCreateAccountBinding, LoginViewModel>(FragmentCreateAccountBinding::inflate) {
+
     override val viewModel: LoginViewModel
         get() = ViewModelProvider(this)[LoginViewModel::class.java]
 
@@ -26,5 +27,15 @@ class CreateAccountFragment :
         binding.tvLogin.setOnClickListener {
             findNavController().popBackStack()
         }
+
+        binding.btnCreateAccount.setOnClickListener {
+            val email = binding.edtEmail.text.toString()
+            val password = binding.edtPassword.text.toString()
+            register(email, password)
+        }
+    }
+
+    private fun register(email: String, password: String) {
+        viewModel.register(email, password)
     }
 }

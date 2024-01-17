@@ -8,6 +8,7 @@ import com.example.notetaking.databinding.FragmentLoginBinding
 
 class LoginFragment :
     BaseFragment<FragmentLoginBinding, LoginViewModel>(FragmentLoginBinding::inflate) {
+
     override val viewModel: LoginViewModel
         get() = ViewModelProvider(this)[LoginViewModel::class.java]
 
@@ -20,16 +21,26 @@ class LoginFragment :
     }
 
     override fun observeData() {
-
+        viewModel.userId.observe(viewLifecycleOwner) { id ->
+            if (id.isNotEmpty()) {
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            }
+        }
     }
 
     override fun setOnClick() {
         binding.btnLogin.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            val email = binding.edtEmail.text.toString()
+            val password = binding.edtPassword.text.toString()
+            login(email, password)
         }
 
         binding.tvCreateAccount.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_createAccountFragment)
         }
+    }
+
+    private fun login(email: String, password: String) {
+        viewModel.login(email, password)
     }
 }
