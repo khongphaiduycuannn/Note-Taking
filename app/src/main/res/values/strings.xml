@@ -42,4 +42,7 @@
     <string name="profile">Profile</string>
     <string name="teams">Teams</string>
     <string name="setting">Setting</string>
+    <string name="save">Save note</string>
+    <string name="delete">Delete note</string>
+    <string name="edit">Edit</string>
 </resources>

@@ -23,7 +23,7 @@ class NoteFragment :
     }
 
     override fun setOnClick() {
-        binding.btnBack.setOnClickListener {
+        binding.toolbar.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
     }

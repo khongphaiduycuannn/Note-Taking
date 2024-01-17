@@ -3,22 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group>
-        <item android:title="@string/setting">
-            <menu>
-                <item
-                    android:id="@+id/nav_profile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/ic_profile"
-                    android:title="@string/profile" />
-                <item
-                    android:id="@+id/nav_team"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:icon="@drawable/ic_team"
-                    android:title="@string/teams" />
-            </menu>
-        </item>
-    </group>
+    <item android:title="@string/setting">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_profile"
+                android:title="@string/profile" />
+            <item
+                android:id="@+id/nav_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_team"
+                android:title="@string/teams" />
+        </menu>
+    </item>
 </menu>
