@@ -61,7 +61,7 @@
             app:exitAnim="@anim/transition_zoom_in"
             app:popEnterAnim="@anim/transition_zoom_out"
             app:popExitAnim="@anim/transition_zoom_in"
-            app:popUpTo="@id/getStartedFragment"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_loginFragment_to_createAccountFragment"
@@ -75,20 +75,5 @@
         android:id="@+id/getStartedFragment"
         android:name="com.example.notetaking.ui.login.GetStartedFragment"
         android:label="fragment_get_started"
-        tools:layout="@layout/fragment_get_started" >
-        <action
-            android:id="@+id/action_getStartedFragment_to_createAccountFragment"
-            app:destination="@id/createAccountFragment"
-            app:enterAnim="@anim/transition_zoom_out"
-            app:exitAnim="@anim/transition_zoom_in"
-            app:popEnterAnim="@anim/transition_zoom_out"
-            app:popExitAnim="@anim/transition_zoom_in" />
-        <action
-            android:id="@+id/action_getStartedFragment_to_loginFragment"
-            app:destination="@id/loginFragment"
-            app:enterAnim="@anim/transition_zoom_out"
-            app:exitAnim="@anim/transition_zoom_in"
-            app:popEnterAnim="@anim/transition_zoom_out"
-            app:popExitAnim="@anim/transition_zoom_in" />
-    </fragment>
+        tools:layout="@layout/fragment_get_started" />
 </navigation>
