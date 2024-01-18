@@ -1,5 +1,6 @@
 package com.example.notetaking.data.repository.user
 
+import com.example.notetaking.base.BaseRepository
 import com.example.notetaking.base.DataState
 import com.example.notetaking.data.model.User
 import com.example.notetaking.data.source.UserRemoteDataSource
@@ -7,7 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
-class UserRepository {
+class UserRepository :BaseRepository() {
 
     private val fireStore = FirebaseFirestore.getInstance()
 
@@ -37,9 +38,11 @@ class UserRepository {
             data.user?.let {
                 userId = it.uid
             }
-            userRemoteDataSource.createUser(
-                User(userId, email, username)
-            )
+            getResult {
+                userRemoteDataSource.createUser(
+                    User(userId, email, username)
+                )
+            }
         } catch (exception: Exception) {
             DataState.Error(exception)
         }
