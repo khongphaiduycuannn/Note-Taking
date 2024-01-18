@@ -67,4 +67,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth-ktx:22.3.0")
     implementation("com.google.firebase:firebase-firestore")
+
+    // Gson
+    implementation("com.google.code.gson:gson:2.9.0")
 }

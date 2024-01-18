@@ -31,10 +31,10 @@ class LoginViewModel : BaseViewModel() {
         )
     }
 
-    fun register(email: String, password: String, onSuccess: () -> Unit) {
+    fun register(email: String, password: String, username: String, onSuccess: () -> Unit) {
         executeTask(
             request = {
-                userRepository.register(email, password)
+                userRepository.register(email, password, username)
             },
             onSuccess = {
                 onSuccess.invoke()

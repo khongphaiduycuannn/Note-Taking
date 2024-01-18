@@ -33,12 +33,13 @@ class CreateAccountFragment :
         binding.btnCreateAccount.setOnClickListener {
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
-            register(email, password)
+            val username = binding.edtFullName.text.toString()
+            register(email, password, username)
         }
     }
 
-    private fun register(email: String, password: String) {
-        viewModel.register(email, password) {
+    private fun register(email: String, password: String, username: String) {
+        viewModel.register(email, password, username) {
             Toast.makeText(
                 MyApplication.getAppContext(),
                 "Register Success!",
