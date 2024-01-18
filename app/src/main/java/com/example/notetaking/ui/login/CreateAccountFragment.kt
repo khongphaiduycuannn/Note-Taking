@@ -1,7 +1,9 @@
 package com.example.notetaking.ui.login
 
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.notetaking.MyApplication
 import com.example.notetaking.base.BaseFragment
 import com.example.notetaking.databinding.FragmentCreateAccountBinding
 
@@ -36,6 +38,13 @@ class CreateAccountFragment :
     }
 
     private fun register(email: String, password: String) {
-        viewModel.register(email, password)
+        viewModel.register(email, password) {
+            Toast.makeText(
+                MyApplication.getAppContext(),
+                "Register Success!",
+                Toast.LENGTH_LONG
+            ).show()
+            findNavController().popBackStack()
+        }
     }
 }

@@ -22,7 +22,7 @@ class LoginFragment :
 
     override fun observeData() {
         viewModel.userId.observe(viewLifecycleOwner) { id ->
-            if (id.isNotEmpty()) {
+            if (!id.isNullOrEmpty()) {
                 findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
             }
         }
